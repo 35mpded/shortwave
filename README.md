@@ -91,7 +91,7 @@ While the Shortwave app is automated (for the most part), there are some setting
 1. You and your counterpart need to agree on which checkerboard you'll both use.  More information can be found in the checkerboard section of this page.
 	- Open the  `config.ini` configuration file and modify the default `checkerboard` value to the one you've agreed upon with your counterpart.
 2. You and your counterpart need to agree on the maximum length of the cipher messages
-	- Open the `configini` configuration file and modify the default `cipher_length` value to the one you've agreed upon with your counterpart.
+	- Open the `config.ini` configuration file and modify the default `cipher_length` value to the one you've agreed upon with your counterpart.
 3. You and your counterpart need to agree on the maximum number of messages that'll be sent before having to generate a new key.
 	- Open the `config.ini` configuration file and modify the default `num_pads` value to the one you've agreed upon with your counterpart.
 		> Be careful with this option since very large numbers can generate very large files.
