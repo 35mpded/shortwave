@@ -1,0 +1,7 @@
+vo/
+/pads_in/*.json
+/pads_out/*.json
+/pads_temp/*.json
+*.wav
+README.md
+*.pem
