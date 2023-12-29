@@ -1,0 +1,1 @@
+Besides the web version of the **Shortwave** app, this repository also includes a console version of the app. However, the console app may not receive any support, documentation, and updates since it's not the primary focus of this repository and project. 

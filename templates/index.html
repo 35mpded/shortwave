@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortwave - Encrypt/Decrypt</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Shortwave</h1>
+    <form method="POST">
+        <textarea name="input_text" placeholder="Enter your message here..."></textarea><br>
+        <input type="submit" name="encrypt" value="ENCRYPT">
+        <input type="submit" name="decrypt" value="DECRYPT">
+    </form>
+    {% if enc_plaintext %}
+        <div class="content-box">
+            <h2 class="box-title">PLAINTEXT</h2>
+            <p><span>{{ enc_plaintext }}</span></p>
+        </div>
+    {% endif %}
+    {% if enc_plaincode %}
+        <div class="content-box">
+            <h2 class="box-title">PLAINCODE</h2>
+            <p><span>{{ enc_plaincode }}</span></p>
+        </div>
+    {% endif %}
+	{% if enc_otp_key %}
+        <div class="content-box">
+            <h2 class="box-title">ONE-TIME PAD (KEY ID {{ enc_otp_key_id }})</h2>
+            <p><span>{{ enc_otp_key }}</span></p>
+        </div>
+    {% endif %}
+    {% if enc_ciphertext %}
+        <div class="content-box">
+            <h2 class="box-title">CIPHERTEXT</h2>
+            <p><span>{{ enc_ciphertext }}</span></p>
+        </div>
+    {% endif %}
+    {% if dec_ciphertext %}
+        <div class="content-box">
+            <h2 class="box-title">CIPHERTEXT</h2>
+            <p><span>{{ dec_ciphertext }}</span></p>
+        </div>
+    {% endif %}
+	{% if dec_otp_key %}
+        <div class="content-box">
+            <h2 class="box-title">ONE-TIME PAD (KEY ID {{ dec_otp_key_id }})</h2>
+            <p><span>{{ dec_otp_key }}</span></p>
+        </div>
+    {% endif %}
+    {% if dec_plaincode %}
+        <div class="content-box">
+            <h2 class="box-title">PLAINCODE</h2>
+            <p><span>{{ dec_plaincode }}</span></p>
+        </div>
+    {% endif %}
+    {% if dec_plaintext %}
+        <div class="content-box">
+            <h2 class="box-title">PLAINTEXT</h2>
+            <p><span>{{ dec_plaintext }}</span></p>
+        </div>
+    {% endif %}
+    {% if status %}
+        <div class="content-box">
+            <h2 class="box-title">STATUS</h2>
+            <p><span>{{ status }}</span></p>
+        </div>
+    {% endif %}
+</body>
+</html>

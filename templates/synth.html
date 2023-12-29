@@ -1,0 +1,21 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortwave - Synthesize</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Shortwave</h1>
+    <form method="POST">
+        <textarea name="input_text" placeholder="Enter your message here..."></textarea><br>
+        <input type="submit" name="message" value="SYNTHESIZE">
+    </form>
+    {% if status %}
+        <div class="content-box">
+            <h2 class="box-title">STATUS</h2>
+            <p><span>{{ status }}</span></p>
+        </div>
+    {% endif %}
+</body>
+</html>
